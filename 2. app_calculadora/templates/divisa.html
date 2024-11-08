@@ -1,0 +1,25 @@
+<!--contacto.html-->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Calculadora de Divisas</h1>
+    <p>Ingresa el valor en dolares estadounidenses para convertir a pesos colombianos</p>
+    <form action="/divisa" method="POST">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="number" class="form-control" name="valor" placeholder="USD" aria-label="Ingresa el valor en dolares estadounidenses">
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row py-2">
+        <div class="col">
+            <h3>${{dolares}} dolares equivalen a ${{resultado}} pesos colombianos</h3>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="{{ url_for('static', filename ='../../../static/css/dark_mode2.css') }}">
+<script src="{{ url_for('static', filename='../../../static/js/dark_mode.js') }}"></script>
+
+{% extends 'public/modulo_login/base_login.html' %}
+{% block title %}Login | AppGamer{% endblock %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg bgk-1">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <img alt="Logo" src="{{url_for('static',filename='../static/img/logo.png')}}" style="max-height: 50px; border-radius: 50%;" class="sombra-logo">
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-white" href="#">
+                      <h1 class="panel">GAMESFULL</h1>
+                  </a>
+              </li>
+          </ul>
+          <div class="d-flex ms-auto align-items-center">
+              
+          </div>
+      </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row justify-content-md-center mt-5 mb-5">
+
+    <!--Login-->
+    <div class="col-md-6 cajaLogin px-5" id="styleLogin" style="background-color: #112734e8;">
+      <div class="mb-12">
+        <a href="{{ url_for('inicio') }}">
+            <img src="{{url_for('static', filename ='../../../static/img/logo.png') }}" alt="Logo" style="max-height: 50px; border-radius: 50%;">
+        </a>
+    </div>
+      {% include 'public/modulo_login/login.html' %}
+    </div>
+
+
+    <!---Register User-->
+    <div class="col-md-6 formRegisterUser register-form px-5" id="" style="display:none; background-color: #112734e8;">
+      <a href="{{ url_for('inicio') }}">
+        <img src="{{url_for('static', filename ='../../../static/img/logo.png') }}" alt="Logo" style="max-height: 50px; border-radius: 50%;">
+    </a>  
+      {% include 'public/modulo_login/registerUser.html' %}
+    </div>
+    <!---fin register User-->
+
+  </div>
+</div>
+
+<!---Mensales - alertas-->
+{% include 'public/dashboard/pages/alerts.html' %}
+{% endblock %}

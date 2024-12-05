@@ -1,0 +1,16 @@
+.login-form {
+    position: relative; 
+    z-index: 10;
+}
+
+.gameboy3d {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    z-index: 0; 
+}
+.form-check {
+    scale: 0.6;
+}

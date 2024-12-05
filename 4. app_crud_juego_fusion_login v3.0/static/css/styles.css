@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.form-check {
+    scale: 0.6;
+}
+
+/* BACKGROUND */
+
+.gameboy3d {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    z-index: 0; 
+}
+
+/* CONTENT */
+
+.main {
+    position: relative; 
+    z-index: 10;
+}
+
+/* TABLA */
+
+.contenedor-tabla {
+    box-sizing: border-box;
+}
+
+.tabla {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+
+    border-radius: 44px;
+    background: #112734e8;
+    box-shadow:  26px 26px 33px #0a1820, -10px -10px 23px #183648;
+
+    th {
+        padding: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
